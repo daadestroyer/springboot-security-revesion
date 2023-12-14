@@ -40,6 +40,6 @@ public class Post {
     @JoinColumn(name = "categoryId")
     private Category category;
 
-    @OneToMany
+    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Comment> comment;
 }
