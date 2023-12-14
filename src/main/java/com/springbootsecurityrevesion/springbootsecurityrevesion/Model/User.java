@@ -38,7 +38,7 @@ public class User {
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Post> post;
 
-    @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.REMOVE,fetch = FetchType.EAGER)
     @JoinTable(name = "user_role",joinColumns = @JoinColumn(name="userId"),inverseJoinColumns = @JoinColumn(name="roleId"))
     private Set<Role> role = new HashSet<>();
 }

@@ -8,6 +8,7 @@ import com.springbootsecurityrevesion.springbootsecurityrevesion.Model.Role;
 import com.springbootsecurityrevesion.springbootsecurityrevesion.Model.User;
 import com.springbootsecurityrevesion.springbootsecurityrevesion.Repo.RoleRepo;
 import com.springbootsecurityrevesion.springbootsecurityrevesion.Repo.UserRepo;
+import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -71,5 +72,17 @@ public class UserService {
         userDto.setRoles(roleDtoSet);
 
         return userDto;
+    }
+
+    @Transactional
+    public String deleteUserById(int userId) {
+        Optional<User> userOptional = this.userRepo.findById(userId);
+        if(userOptional.isPresent() == false){
+            return "User with id "+userId+" not found...";
+        }
+        User user = userOptional.get();
+        user.getRole().clear();
+        this.userRepo.delete(user);
+        return "User with id "+userId+" deleted...";
     }
 }

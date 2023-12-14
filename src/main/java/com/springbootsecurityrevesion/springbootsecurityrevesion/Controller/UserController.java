@@ -26,19 +26,25 @@ public class UserController {
 
     @PostMapping("/register-user/{isAdmin}")
     public ResponseEntity<?> registerUser(@RequestBody UserDto userDto, @PathVariable Boolean isAdmin) {
-        UserDto savedUserDto = this.userService.registerUser(userDto,isAdmin);
-        return new ResponseEntity<>(savedUserDto,HttpStatus.OK);
+        UserDto savedUserDto = this.userService.registerUser(userDto, isAdmin);
+        return new ResponseEntity<>(savedUserDto, HttpStatus.OK);
     }
 
     @GetMapping("/get-all-user")
-    public ResponseEntity<?> getAllUser(){
+    public ResponseEntity<?> getAllUser() {
         List<UserDto> allUser = this.userService.getAllUser();
-        return new ResponseEntity<>(allUser,HttpStatus.OK);
+        return new ResponseEntity<>(allUser, HttpStatus.OK);
     }
 
     @GetMapping("/get-user-by-id/{userId}")
-    public ResponseEntity<?> getUser(@PathVariable int userId){
+    public ResponseEntity<?> getUser(@PathVariable int userId) {
         UserDto user = this.userService.getUser(userId);
-        return new ResponseEntity<>(user,HttpStatus.OK);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
+    @DeleteMapping("delete-user-by-id/{userId}")
+    public ResponseEntity<?> deleteUserById(@PathVariable int userId){
+        String message = this.userService.deleteUserById(userId);
+        return new ResponseEntity<>(message,HttpStatus.OK);
     }
 }
