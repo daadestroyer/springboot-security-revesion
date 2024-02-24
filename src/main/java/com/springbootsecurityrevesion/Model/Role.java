@@ -1,4 +1,4 @@
-package com.springbootsecurityrevesion.springbootsecurityrevesion.Model;
+package com.springbootsecurityrevesion.Model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

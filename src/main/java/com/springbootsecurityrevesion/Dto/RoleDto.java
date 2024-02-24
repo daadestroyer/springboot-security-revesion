@@ -1,4 +1,4 @@
-package com.springbootsecurityrevesion.springbootsecurityrevesion.Dto;
+package com.springbootsecurityrevesion.Dto;
 
 import lombok.*;
 

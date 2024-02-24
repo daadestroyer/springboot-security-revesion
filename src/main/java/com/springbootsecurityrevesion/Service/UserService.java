@@ -1,13 +1,13 @@
-package com.springbootsecurityrevesion.springbootsecurityrevesion.Service;
+package com.springbootsecurityrevesion.Service;
 
 
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Constant.RoleConstant;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Dto.RoleDto;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Dto.UserDto;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Model.Role;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Model.User;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Repo.RoleRepo;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Repo.UserRepo;
+import com.springbootsecurityrevesion.Constant.RoleConstant;
+import com.springbootsecurityrevesion.Dto.UserDto;
+import com.springbootsecurityrevesion.Model.Role;
+import com.springbootsecurityrevesion.Repo.RoleRepo;
+import com.springbootsecurityrevesion.Repo.UserRepo;
+import com.springbootsecurityrevesion.Dto.RoleDto;
+import com.springbootsecurityrevesion.Model.User;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 public class UserService {

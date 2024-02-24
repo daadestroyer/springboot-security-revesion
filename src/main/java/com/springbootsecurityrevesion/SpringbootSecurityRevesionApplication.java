@@ -1,14 +1,16 @@
-package com.springbootsecurityrevesion.springbootsecurityrevesion;
+package com.springbootsecurityrevesion;
 
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Constant.RoleConstant;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Model.Role;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Repo.RoleRepo;
+import com.springbootsecurityrevesion.Constant.RoleConstant;
+import com.springbootsecurityrevesion.Model.Role;
+import com.springbootsecurityrevesion.Repo.RoleRepo;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
 
 import java.util.List;
 

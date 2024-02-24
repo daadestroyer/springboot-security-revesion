@@ -1,4 +1,4 @@
-package com.springbootsecurityrevesion.springbootsecurityrevesion.Model;
+package com.springbootsecurityrevesion.Model;
 
 
 import jakarta.persistence.*;
@@ -21,6 +21,7 @@ public class Category {
             sequenceName = "category-sequence",
             allocationSize = 1
     )
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "category-sequence")
     private int catId;
 
     private String catTitle;

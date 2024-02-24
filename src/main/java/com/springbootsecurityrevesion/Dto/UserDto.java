@@ -1,9 +1,7 @@
-package com.springbootsecurityrevesion.springbootsecurityrevesion.Dto;
+package com.springbootsecurityrevesion.Dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Model.Post;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Model.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
@@ -14,7 +12,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 

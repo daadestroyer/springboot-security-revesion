@@ -1,16 +1,15 @@
-package com.springbootsecurityrevesion.springbootsecurityrevesion.Controller;
+package com.springbootsecurityrevesion.Controller;
 
 
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Dto.RoleDto;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Dto.UserDto;
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Service.UserService;
+import com.springbootsecurityrevesion.Dto.UserDto;
+import com.springbootsecurityrevesion.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.lang.annotation.Documented;
 import java.util.List;
-import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/user")

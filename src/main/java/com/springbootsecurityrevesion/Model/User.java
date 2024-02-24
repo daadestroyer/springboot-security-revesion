@@ -1,4 +1,4 @@
-package com.springbootsecurityrevesion.springbootsecurityrevesion.Model;
+package com.springbootsecurityrevesion.Model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -20,9 +20,10 @@ public class User {
     @SequenceGenerator(
             name = "user_sequence",
             sequenceName = "user_sequence",
-            allocationSize = 1
+            initialValue = 101,
+            allocationSize = 5
     )
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_sequence")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "user_sequence")
     private int userId;
 
     @Column(nullable = false)

@@ -1,4 +1,4 @@
-package com.springbootsecurityrevesion.springbootsecurityrevesion.Constant;
+package com.springbootsecurityrevesion.Constant;
 
 public class RoleConstant {
     public final static int ADMIN_ROLE = 501;

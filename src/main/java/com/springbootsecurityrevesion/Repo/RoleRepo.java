@@ -1,6 +1,6 @@
-package com.springbootsecurityrevesion.springbootsecurityrevesion.Repo;
+package com.springbootsecurityrevesion.Repo;
 
-import com.springbootsecurityrevesion.springbootsecurityrevesion.Model.Role;
+import com.springbootsecurityrevesion.Model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
